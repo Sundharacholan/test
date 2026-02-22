@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState("Click button to test backend");
 
   const getMessage = async () => {
-    const response = await fetch("http://localhost:5000/message");
+    const response = await fetch("https://test-yt7f.onrender.com/message");
     const data = await response.json();
     setMessage(data.message);
   };

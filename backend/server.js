@@ -5,8 +5,12 @@ const app = express();
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+})
+
 app.get("/message", (req, res) => {
-  res.json({ message: "Backend connected from Render 🚀" });
+  res.json({ message: "Backend connected from server 🚀" });
 });
 
 const PORT = process.env.PORT || 5000;
